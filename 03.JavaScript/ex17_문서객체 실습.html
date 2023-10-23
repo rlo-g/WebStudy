@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="tit">클릭을 한 번 해볼까요?</h1>
+    <p id="link-txt"></p>
+    <p id="list"></p>
+
+    <!-- 이벤트 시작 시 : on~=""> -->
+    <!-- <button onclick="alert('이벤트 실행!')">클릭</button> -->
+
+    <button onclick="h1Change()">클릭</button>
+    <button onclick="createLink()">링크 생성</button>
+    <button onclick="createList()">목록 생성</button>
+
+
+    <script>
+        // h1 태그의 내용을 변경하는 함수
+        let h1Change = function(){
+            const tit = document.getElementById("tit");
+            tit.innerText = "변경완료!";
+
+            // HTML 태그 스타일 변경
+            tit.style.color = "blue";
+            tit.style.border = "1px solid black";
+            tit.style.backgroundColor = "skyblue";
+        }
+
+        let createLink = function(){
+            const linkText = document.getElementById("link-txt");
+            linkText.innerHTML = "<a href='https://www.naver.com'>네이버 이동</a>";
+        }
+
+        let createList = function(){
+            const list = document.getElementById("list");
+           
+            let arr = ["HTML", "CSS", "JavaScript"];
+            let resultHTML = "<ul>";
+
+            for(let i = 0; i < arr.length; i++){
+                resultHTML += `<li>${arr[i]}</li>`;
+            }
+
+            resultHTML += "</ul>";
+
+            list.innerHTML = resultHTML;
+            // list.innerHTML = `
+            //     <ul>
+            //         <li>HTML</li>
+            //         <li>CSS</li>
+            //         <li>JavaScript</li>
+            //     </ul>
+            // `;
+        }
+    </script>
+</body>
+</html>

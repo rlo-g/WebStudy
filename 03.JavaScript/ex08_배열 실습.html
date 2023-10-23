@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let fruits = ["apple", "avocado", "banana", "blueberry", "cherry", "dragon fruit", 
+         "fig", "grape", "kiwi", "lime", "mango", "orange", "oriental melon", "pear",
+         "peach", "pineapple", "shine muscat", "strawberry", "tomato", 
+        "water melon", "yuja"];
+
+        console.log(fruits);
+
+        // 마지막 아이템 yuja 삭제
+        fruits.pop();
+        console.log(fruits);
+
+        // grapefruit 추가
+        fruits.push("grapefruit");
+        console.log(fruits);
+
+        // cherry tomato, pine nut, korean blackberry 추가
+        fruits.push("cherry tomato", "pine nut", "korean blackberry");
+        console.log(fruits);
+
+        // orange 유무 확인
+        console.log(fruits.includes("orange"));
+
+        // kiwi 유무 확인
+        console.log(fruits.includes("kiwi"));
+
+        // water melon > melon
+        console.log(fruits.indexOf("water melon"));
+        fruits[19] = "melon"
+        console.log(fruits);
+
+        // lime부터 3개의 아이템 삭제
+        console.log(fruits.indexOf("lime"));
+        fruits.splice(9,3);
+        console.log(fruits);
+
+        // shine muscat 이후 데이터 삭제
+        console.log(fruits.indexOf("shine muscat"));
+        fruits.splice(13)
+        console.log(fruits);
+
+        // p로 시작되는 pear ~ pineapple까지 가져와서 새로운 배열에 저장하기
+        console.log(fruits.indexOf("pear"));
+        let p_arr = fruits.slice(10,13)
+        console.log(p_arr);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>입력요소의 데이터 접근하기</h1>
+
+    <form action="">
+        <input type="text" id="user-input">
+        <input type="button" value="출력" id="btn">
+    </form>
+
+    <p id="msg"></p>
+
+
+    <script>
+        // 이벤트 & 이벤트핸들러
+        // 1. 이벤트 : 웹 페이지에서 마우스, 키보드 입력, 스크롤 등이 발생하는 행위
+        // 2. 이벤트 핸들러 : 이벤트가 감지되었을 때, 동작하는 함수
+        //  (+) 이벤트 종류 p541
+
+
+
+
+        const userInput = document.getElementById("user-input");
+        const btn = document.getElementById("btn");
+        const msg = document.getElementById("msg");
+
+        let getValue = function() {
+            // 사용자가 입력한 값에 접근하는 방법
+            // innerText : 해당 태그에 시작, 끝 태그가 존재할 때만 사용가능
+            // >> 입력요소.value
+            // 이 외: select, textarea
+            console.log(userInput.value);
+
+            msg.innerText = userInput.value;
+            
+        }
+
+        
+        // // 버튼 객체에 이벤트를 적용하는 방법 1 (p547)
+        // btn.onclick = function() {
+        //     // 클릭에 대한 것만 적용
+        // }
+        
+        
+        // // 버튼 객체에 이벤트를 적용하는 방법 2 (p616)
+        // btn.addEventListener("click", function(){
+        //     // 이벤트 종류, 함수
+        // });
+            
+            
+        // 미리 만들어진 함수를 호출하는 방법
+        // btn.addEventListener("click", getValue);
+        userInput.addEventListener("change", getValue);  // keyup, keypress
+
+    </script>
+
+
+
+</body>
+</html>

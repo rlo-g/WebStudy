@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="button"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="button"/>
+			<item value="scrolly"/>
+			<item value="p"/>
+			<item value="banner"/>
+			<item value="map"/>
+			<item value="df7366"/>
+			<item value="circled"/>
+			<item value="button circled scrolly"/>
+			<item value="hover"/>
+			<item value=".row gtr-200"/>
+			<item value=".row grt-200"/>
+			<item value=".row"/>
+			<item value="            &lt;label for=&quot;nick&quot;&gt;NickName&lt;/label&gt;"/>
+			<item value="&#x09;request.setCharacterEncoding(&quot;EUC-KR&quot;); &gt;&gt; id/pw는 거의 백프로 영어로 입력되므로 한글인코딩 안 해도 됨"/>
+			<item value="&#x09;&#x09;&#x09;이름 &lt;%=&quot;\n&quot; %&gt; &lt;%=name %&gt;"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1203"/>
+		<item key="DIALOG_Y_ORIGIN" value="312"/>
+		<item key="DIALOG_WIDTH" value="369"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

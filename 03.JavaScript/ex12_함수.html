@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 함수 활용방법 - 매개변수, return
+        let greet = function(name){
+            console.log("안녕하세요. 저는 "+name+"입니다. 반갑습니다!");
+            console.log(`안녕하세요. 저는 ${name}입니다. 반갑습니다!`);
+        }
+        greet("송은지");
+        greet("햄미");
+
+        // 숫자 연산 함수
+        let plus = function(num1, num2){
+            console.log(num1+num2);
+        }
+        plus(3,4);
+
+        let minus = function(num1, num2){
+            console.log(num1-num2);
+        }
+        let mul = function(num1, num2){
+            console.log(num1*num2);
+        }
+        let div = function(num1, num2){
+            console.log(num1/num2);
+        }
+        
+        minus(5,1);
+        mul(2,4);
+        div(8,3);
+
+
+    </script>
+    
+</body>
+</html>

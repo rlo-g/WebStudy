@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        sup{
+            display: none;  /*사라짐*/
+        }
+        p:hover sup{        /* p 태그에 마우스를 올렸을 때 sup가 나타나는 법
+                                - sup는 p의 자식(or자손)이므로...*/
+            display : inline;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        네이버
+        <sup>
+            <a href="https://www.naver.com"> www.naver.com</a>
+        </sup>
+    </p>
+    <p>
+        다음
+        <sup>
+            <a href="https://www.daum.net"> www.daum.net</a>
+        </sup>
+    </p>
+</body>
+</html>

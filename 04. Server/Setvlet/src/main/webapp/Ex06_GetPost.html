@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 데이터를 전송하기 위한 방법 2가지
+		1. Do Get
+		2. Do Post -->
+		
+		
+	<!-- Do Get 방식으로 데이터 전갈하기 -->
+	<!-- 
+		전송하고싶은곳URL?name=value&name=value  <==>  QueryString 방식
+		ex) Ex06_GetPost?get=47
+		
+		단점: 적은 양의 데이터, 보안취약 (주소에 노출되므로) 
+		-->
+		
+	<fieldset>
+	<!-- fieldset : 페이지 선 생성, legend : fieldset 제목 생성 -->
+		<legend>Get 방식</legend>
+		<!-- 데이터를 보내는 방식 선택 : method="" --> 
+		<form action="Ex06_GetPost" method="get">
+			<input type="text" name="get">
+			<input type="text" name="txt">
+			<input type="submit">
+		</form>
+	</fieldset>
+	
+	
+	
+		<!-- Do Post 방식으로 데이터 전갈하기 -->
+	<!-- 
+		패킷 바디 안에 form 양식에 담겨 전달
+		많은 양의 데이터 전송 가능, 보안 강력(Get방식에 비해)
+		but, 공유 불가능
+
+		-->
+	<fieldset>
+		<legend>Post 방식</legend>
+		<!-- 데이터를 보내는 방식 선택 : method="" --> 
+		<form action="Ex06_GetPost" method="post">
+			<input type="text" name="post">
+			<input type="text" name="txt">
+			<input type="submit">
+		</form>
+	</fieldset>
+
+</body>
+</html>

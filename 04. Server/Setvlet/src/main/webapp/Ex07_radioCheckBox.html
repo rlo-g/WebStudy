@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- radio 중복x, checkBox 중복o -->
+	<form action="Ex07_radioCheckBox" method="post">
+		결혼유무 :
+		기혼자 <input value="기혼자" type="radio" name="marriage">  <!-- radio는 똑같은 name을 설정해줘야한다! --> 
+		미혼자 <input value="미혼자 "type="radio" name="marriage">  <!-- value를 통해 선택/제출 시 value 값이 나타남 -->
+		
+		<br>
+		취미 :
+		OTT 시청 <input type="checkbox" name="hobby" value="OTT">
+		게임 <input type="checkbox" name="hobby" value="게임">
+		맛집탐방 <input type="checkbox" name="hobby" value="맛집탐방">
+		방탈출 <input type="checkbox" name="hobby" value="방탈출">
+		
+		<input type="submit">
+	
+	</form>
+
+</body>
+</html>

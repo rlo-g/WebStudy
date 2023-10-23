@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* float
+          - display block을 없애고 inline 속성으로 만들면 너비,높이 속성을 주지 못함
+          - 화면을 분할하여 레이아웃 배치 시, 너비와 높이를 유지한 채로 올라가기 위해 사용*/
+
+        #wrap{
+            width: 1000px;
+            height: 1000px;
+            background-color: rgb(247, 235, 218);
+        }
+        #div1{
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+            float: left;
+        }
+        #div2{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(75, 129, 131);
+            float: left;
+        }
+        #div3{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(53, 92, 94);
+            float: right;
+        }
+        #div4{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(32, 56, 56);
+            clear: both;  /* float 속성을 없애줌*/
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+        
+</body>
+</html>

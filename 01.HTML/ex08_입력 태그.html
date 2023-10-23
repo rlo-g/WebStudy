@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        ** 입력 받는 모든 태그는 <form> 태그 안에 들어가 있어야 한다!!
+
+             <input value = "기본값 지정"
+                    type = "작성되는 데이터 양식(글자, 숫자, 비밀번호, 이메일 등..)" 
+                    placeholder = "미리보기 텍스트(입력 전 회색글씨)">
+                    maxlength = "최대 글자 수"
+                    readonly : 작성불가  
+                    -->
+
+    <form>
+    
+    <!-- 아이디 -->
+    ID : <input maxlength="10" type="text" placeholder="아이디를 입력해주세요">
+
+    <!-- 비밀번호 -->
+    <br>
+    PW : <input type="password" placeholder="비밀번호를 입력해주세요">
+
+    <!-- 이메일 -->
+    <br>
+    E-Mail : <input type="email" placeholder="이메일을 입력해주세요">
+
+    <!--제출 버튼-->
+    <br>
+    <input type="submit"> 
+
+    <!-- 파일 올리기-->
+    <br>
+    File : <input type="file">
+
+    <!-- 색상 선택-->
+    <br>
+    Color : <input type="color">
+
+    <!-- 선택 버튼-->
+    <br>
+    남자 <input type="radio" name="gender">
+    여자 <input type="radio" name="gender">   <!-- radio : 중복 불가 선택 버튼
+                                                   but, 같은 그룹인 것을 명시해야 '중복 불가'가 적용됨-->
+    <br>
+    메이플스토리 <input type="checkbox">
+    휴먼 폴 플랫 <input type="checkbox">
+    테일즈런너 <input type="checkbox">
+    오버워치2 <input type="checkbox">   <!-- checkbox : 중복 가능 선택 버튼-->
+
+    <!-- 숫자 입력 -->
+    <br>
+    나이 : <input type="number">
+
+    <!-- 범위 설정 -->
+    <br>
+    범위 : <input type="range">
+
+    <!-- 날짜 입력 (달력)-->
+    <br>
+    날짜 : <input type="date">
+
+    <!-- 옵션 선택 -->
+    <br>
+    <select>
+        <option>대한민국</option>
+        <option>미국</option>
+        <option>중국</option>
+        <option>일본</option>
+        <option>독일</option>
+        <option>프랑스</option>
+    </select>
+
+    <br>
+    하고싶은말
+    <br>
+    <textarea cols="50" rows="30"></textarea>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;    /*페이지에 기본적으로 존재하는 작은 틈이 사라짐*/
+        }
+        #wrap{      
+            width: 100%;
+            height: 1000px; /*너비는 %로 제한 가능, 높이는 불가능*/
+            background-color: azure;
+        }
+        #header{
+            width: 100%;
+            height: 20%;   /*부모태그(body)의 높이가 설정되었으므로 % 가능*/
+            background-color: rgb(199, 196, 196);
+        }
+        #container{
+            width: 80%;
+            height: 70%;
+            background-color: cadetblue;
+            float: left;
+        }
+        #nav{
+            width: 20%;
+            height: 70%;
+            background-color: rgb(75, 124, 126);
+            float: left;
+        }
+        #footer{
+            width: 100%;
+            height: 10%;
+            background-color: rgb(172, 167, 167);
+            /*float 속성으로 인해 위로 올라가 있음 > clear*/
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="container"></div>
+        <div id="nav"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

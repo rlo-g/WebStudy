@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table width="400px"> <!-- 테이블 전체 너비 고정-->
+
+            <!-- 아이디/비밀번호  -->
+            <tr>  <!-- tr : 행을 나누는 개념, 넓이/공간 차지 x -->
+                <td height="50px" bgcolor = "gray" colspan="2"> <!-- colspan : 열병합 (td가 )-->
+                    <h4>Step1 : 아이디/비밀번호 입력</h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    아이디 :
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    비밀번호 :
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <input type="password">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    비밀번호 확인 :
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <input type="password">
+                </td>
+            </tr>
+
+
+
+        <!-- 개인정보 -->
+            <tr>
+                <td height="50" bgcolor = "gray" colspan="2">
+                    <h4>Step2 : 개인정보 </h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    성별 : 
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    남 <input type="radio" name="gender">  여 <input type="radio" name="gender">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    혈액형 : 
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <select>
+                        <option>A형</option>
+                        <option>B형</option>
+                        <option>O형</option>
+                        <option>AB형</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    생일 : 
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <input type="date">
+                </td>
+            </tr>
+
+
+            <!-- 선호도 -->
+            <tr>
+                <td height="50" bgcolor = "gray" colspan="2">
+                    <h4>Step3 : 선호도 </h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    취미 : 
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    축구 <input type="checkbox">
+                    야구 <input type="checkbox">
+                    농구 <input type="checkbox">
+
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" height="35" bgcolor="whitesmoke" >
+                    좋아하는 색깔 : 
+                </td>
+                <td bgcolor="whitesmoke" align="left">
+                    <input type="color">
+
+                </td>
+            </tr>
+
+            
+            <!-- 적고 싶은 말 -->
+            <tr>
+                <td height="50" bgcolor = "gray" colspan="2">
+                    <h4>Step4 : 적고 싶은 말 </h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center" bgcolor="whitesmoke" height="35px" colspan="2">
+                    <textarea rows="8" cols="60"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td height="35" bgcolor = "whitesmoke" align="center" colspan="2">
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+
+
+
+
+
+
+    
+</body>
+</html>

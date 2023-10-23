@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 400px;
+            height: 400px;
+            border: 5px solid black;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .box-img{
+            width: 150px;
+            height: 150px;
+        }
+
+        #result-me, #result-computer{
+            font-size: 2em;
+        }
+
+        .container>button {
+            margin-top: 10px;
+        }
+
+        .win {
+            border: 3px solid green;
+        }
+
+        .lose {
+            border: 3px solid red;
+        }
+
+        .tie {
+            border: 3px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <h1>Me</h1>
+            <div id="box-me">...</div>
+            <h3 id="result-me">...</h3>
+        </div>
+        <div class="box">
+            <h1>Computer</h1>
+            <div id="box-computer">...</div>
+            <h3 id="result-computer">...</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="btn-play" onclick="play()">Play</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        /*
+            1. 유저가 Play 버튼을 누른다.
+            2. 유저와 컴퓨터는 랜덤으로 가위, 바위, 보를 출력한다.
+            3. 유저와 컴퓨터의 값을 비교하여 출력한다.
+              3-1. 승패에 따라 win, lose 를 출력
+              3-2. 비긴 경우, tie 출력
+            4. 승패에 따라 테두리가 다르게 출력한다. ( HTML객체.style.border 활용 ) 
+              4-1. 이긴 경우, 초록색 테두리
+              4-2. 진 경우, 빨간색 테두리
+              4-3. 비긴 경우, 검정색 테두리 
+        */
+
+
+
+        let play = function(){
+            
+            let arr = ["paper", "rock", "scissors"];    // arr에 가위바위보 데이터 저장
+
+
+            // 이미지 출력
+            const boxMe = document.getElementById("box-me");
+            let randomNum = parseInt(Math.random()*3)        // arr 배열 값에 접근
+            boxMe.innerHTML = `<img class='box-img' src='./img/${arr[randomNum]}.png'>`;
+
+            const boxComputer = document.getElementById("box-computer");
+            let randomNum_c = parseInt(Math.random()*3)     // arr 배열 값에 접근(computer) : 뒤에 승패판단 때문에 랜덤 변수 다르게 설정함
+            boxComputer.innerHTML = `<img class='box-img' src='./img/${arr[randomNum_c]}.png'>`;
+
+
+
+            // 승패 판단 (win, lose, tie) > 텍스트 출력
+            const resultMe = document.getElementById("result-me");
+            const resultComputer = document.getElementById("result-computer");
+
+            let me = getResultMe(arr[randomNum], arr[randomNum_c]);
+            let computer = getResultComputer(arr[randomNum], arr[randomNum_c]);  // 스타일 변겨엥서 사용하기 위해 변수 설정
+
+            resultMe.innerText = me;
+            resultComputer.innerText = computer; 
+
+            
+            // 승패에 따른 스타일 변경
+            const boxs = document.getElementsByClassName("box");
+            // setAttribute(속성이름, 바꿔줄 속성 값); 태그의 속성을 추가할 때 사용하는 메서드
+            // class 속성 값은 한 개 이상 정의할 수 있다!
+            // 여러개의 값이 정의된 경우, 다양한 용도로 활용 가능
+            //  - 공통된 스타일, 고유한 스타일, 자바스크립트로 접근...
+            // ex) <div class="box win"> (클래스 이름 2개가 이어짐)
+            boxs[0].setAttribute("class", `box ${me}`);      
+            boxs[1].setAttribute("class", `box ${computer}`);   
+
+            
+        }
+        
+        
+        
+        
+        // 승패판단 (Me 기준)
+        let getResultMe = function(me, computer) {
+            if(me === computer) return "tie";
+            else if (me == "rock") return computer === "scissors" ? "win" : "lose";  // 삼항연산자
+            else if (me == "scissors") return computer === "paper" ? "win" : "lose";
+            else if (me == "paper") return computer === "rock" ? "win" : "lose";
+        }
+        
+        // 승패판단 (Computer 기준)
+        let getResultComputer = function(me, computer) {
+            if(computer === me) return "tie";
+            else if (computer == "rock") return me === "scissors" ? "win" : "lose"; 
+            else if (computer == "scissors") return me === "paper" ? "win" : "lose";
+            else if (computer == "paper") return me === "rock" ? "win" : "lose";
+        }
+        
+
+
+
+        // let getImgName = function(arr){
+        //     if(arr === "paper") return "paper";
+        //     else if(arr === "rock") return "rock";
+        //     else return "scissors"
+        // }
+
+        
+
+
+
+    </script>
+</body>
+
+</html>

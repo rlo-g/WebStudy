@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div>span#like -->
+    <div>
+        💕<span id="like"> 0</span>
+    </div>
+
+    <button onclick="like()">좋아요</button>
+    <button onclick="disLike()">싫어요</button>
+
+    <script>
+        // 실습문제 : 버튼을 눌렀을 때, 숫자가 변경되는 함수 구현
+        // 1. 좋아요 : 숫자 +1
+        // 2. 싫어요 : 숫자 -1
+
+        // process
+        // 1. 버튼을 클릭한다
+        // 2. 숫자가 증가/감소된다
+        //  - 버튼 클릭 시 동작하는 함수 생성
+        //  - id가 like/dislike인 HTML 객체에 접근
+        //  - innerText를 활용해서 증가/감소된 숫자 적용
+
+        
+
+        // 좋아요 버튼
+        let like = function(){
+            const l = document.getElementById("like");
+            // l.innerText = l.innerText + 1;  >>  string + number이므로 숫자가 이어져서 나옴
+            l.innerText = parseInt(l.innerText) + 1;
+        }
+        
+        // let sum = 0;
+        // let like = function(){
+        //     let cnt = 1;
+        //     const l = document.getElementById("like");
+        //     for(let i = 0; i < cnt; i++){
+        //         sum += 1;
+        //     }
+        //     l.innerText = sum;
+        // }
+
+
+
+
+        // 싫어요 버튼
+        let disLike = function(){
+            const d = document.getElementById("like");
+            // l.innerText = l.innerText + 1;  >>  string + number이므로 숫자가 이어져서 나옴
+            d.innerText = parseInt(d.innerText) - 1;
+        }
+
+        // let disLike = function(){
+        //     let cnt = 1;
+        //     const l = document.getElementById("like");
+        //     for(let i = 0; i < cnt; i++){
+        //         sum -= 1;
+        //     }
+        //     l.innerText = sum;
+        // }
+
+
+
+
+
+    </script>
+</body>
+</html>

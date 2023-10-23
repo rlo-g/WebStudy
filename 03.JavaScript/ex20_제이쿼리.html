@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>jQuery</h1>
+    <h1 id="tit">안녕하세요?</h1>
+
+    <!-- jQuery 파일 불러오기 -->
+    <script src="./js/jquery-3.7.0.js"></script>
+
+    <script>
+        // jQuery 문법: $ (jQuery 객체)
+        // document.getElementsByTagName("h1");   --> $("h1")
+        // $(CSS 선택자) : 선택자에 해당하는 모든 HTML 객체를 배열형태로 반환하는 함수
+
+        $("h1");  // h1이라는 태그를 찾아오겠다! (태그에 접근하는 함수)
+        const $h1Tag = $("#tit");
+        console.log(($h1Tag));
+
+
+        // h1 태그 내용에 접근하는 함수
+        // JavaScript : innerText, innerHTML
+        console.log($h1Tag.text());
+        console.log($h1Tag.html());
+
+
+        // h1 태그의 내용 변경
+        // .text()
+        // .html() : 태그 삽입 가능
+        $h1Tag.text("변경성공!");
+
+        // h1태그 스타일 변경 함수
+        $h1Tag.css({
+            color:"green",
+            backgroundColor : "blue"
+        });
+
+        //h1태그 이벤트 적용하는 함수
+        $h1Tag.on("click",function () {
+            alert("클릭이벤트 실행!");
+        });
+
+
+
+
+    </script>
+</body>
+</html>

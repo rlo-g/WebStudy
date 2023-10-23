@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+           아이디 선택자와 클래스 선택자
+            - 특정 요소(태그)에 디자인을 적용하고 싶을 때 사용
+            
+            1. 아이디 선택자 (#) 
+              - 특정 요소를 구분하기 위해서
+                해당 태그 안에 [ id="아이디명" ] --> <style>에서 적용 시 [ #아이디명{} ] 
+              - HTML(body)에서 딱 한 번만 쓰임 (ex. HTML 구조에 공간 분할을 적용, 로고, 상단메뉴, 하단정보 등의 스타일 정의 시)
+                  > rmfj
+
+            2. 클래스 선택자 (.)
+              - 해당 태그 안에 [ class="아이디명" ] --> <style>에서 적용 시 [ .클래스명{} ]
+              - 중복되는 게 많을 때 사용 (ex. 공통되는 스타일 적용 시)
+              - body의 태그에서 클래스명 입력 시, 띄어쓰기를 통해서 여러 개의 태그에 동시 적용될 수 있다 */
+
+
+
+        #apple {
+            color : red;
+        }
+        #banana{
+            color : yellow;
+        }
+        #blue{
+            color: blue;
+        }
+        #ki{
+            color : green;
+        }
+        .a{
+            color:red;
+        }
+        .b{
+            color:yellow;
+        }
+        .bb{
+            color:blue;
+        }
+        .k{
+            color:green;
+        }
+        .text{
+            font-size: 50px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1 id="apple">사과</h1>
+    <h1 id="banana">바나나</h1>
+    <h1 id="blue">블루베리</h1>
+    <h1 id="ki">키위</h1>
+
+    <ul>
+        <li class="a">사과</li>
+        <li class="b">바나나</li>
+        <li class="bb">블루베리</li>
+        <li class="k text">키위</li>
+    </ul>
+
+
+</body>
+</html>
